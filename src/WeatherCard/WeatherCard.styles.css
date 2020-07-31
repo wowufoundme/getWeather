@@ -1,0 +1,138 @@
+.card--container {
+    width: 400px;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    background-color: var(--PRIMARY-BACKGROUND-COLOR);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.city--info--container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.city--name {
+    font-weight: 300;
+    font-size: 48px;
+    letter-spacing: -1px;
+    color: var(--PRIMARY-TEXT-COLOR);
+}
+
+.city--country {
+    font-size: 24px;
+    font-weight: 300;
+    height: 50%;
+    padding: 10px 14px;
+    margin-left: 10px;
+    border-radius: 2px;
+    background: var(--PRIMARY-TEXT-COLOR);
+    color: var(--PRIMARY-BACKGROUND-COLOR);
+}
+
+.geo--location {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    margin-top: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.geo--title {
+    font-size: 18px;
+    color: var(--PRIMARY-GREY);
+}
+
+.geo--value {
+    font-size: 32px;
+    color: var(--PRIMARY-TEXT-COLOR);
+}
+
+.temperature--stats {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.condition--icon {
+    width: 120px;
+    height: 120px;
+}
+
+.temperature--reading {
+    font-size: 90px;
+    font-weight: 200;
+    color: var(--PRIMARY-TEXT-COLOR);
+}
+
+.miscellaneous--stats {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.misc--title--container {
+    color: var(--PRIMARY-GREY);
+}
+
+.three-folds--grid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.weather--condition {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--PRIMARY-TEXT-COLOR);
+}
+
+.max--temperature,
+.min--temperature {
+    color: var(--PRIMARY-TEXT-COLOR);
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.align--vertically--center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.text--center {
+    text-align: center;
+}
+
+.fc--icon {
+    color: var(--SECONDARY-GREY);
+    padding-right: 5px;
+    font-size: 20px;
+}
+
+.mr--20 {
+    padding-right: 10px;
+}
+
+.ml--20 {
+    padding-left: 20px;
+}
