@@ -1,0 +1,70 @@
+/* 
+    Meyer Reset to reset the CSS properties across browsers.
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.App {
+    width: 100vw;
+    height: 100vh;
+}
+
+.background--slideshow {
+    background-color: #0a0a0a;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    animation: backgroundSlide 20s linear infinite 0s;
+    animation-timing-function: cubic-bezier(.18,.92,.11,1);
+    background: url('./assets/backgrounds/1.jpg');
+}
+
+@keyframes backgroundSlide {
+    0% {
+        background: url('./assets/backgrounds/1.jpg');
+    }
+
+    25% {
+        background: url('./assets/backgrounds/2.jpg');
+    }
+
+    50% {
+        background: url('./assets/backgrounds/3.jpg');
+    }
+
+    75% {
+        background: url('./assets/backgrounds/4.jpg');
+    }
+
+    100% {
+        background: url('./assets/backgrounds/1.jpg');
+    }
+}
