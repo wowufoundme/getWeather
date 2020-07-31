@@ -1,0 +1,12 @@
+.input--control {
+    outline: none;
+    border: none;
+    width: 440px;
+    height: 60px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0; 
+    background: var(--PRIMARY-BACKGROUND-COLOR);
+    color: var(--PRIMARY-TEXT-COLOR)
+}
