@@ -29,11 +29,29 @@ footer, header, hgroup, menu, nav, section {
 
 * {
     font-family: 'Source Sans Pro', sans-serif;
+    transition: all .1s ease-in-out;
+}
+
+html {
+    --PRIMARY-BACKGROUND-COLOR: #ffffff;
+    --PRIMARY-TEXT-COLOR: #2e2e2e;
+    --PRIMARY-GREY: #a1a1a1;
+    --SECONDARY-GREY: #5a5a5a;
+}
+
+html[data-theme="dark"] {
+    --PRIMARY-BACKGROUND-COLOR: #1a1a1a;
+    --PRIMARY-TEXT-COLOR: #ffffff;
+    --PRIMARY-GREY: #a1a1a1;
+    --SECONDARY-GREY: #5a5a5a;
 }
 
 .App {
-    width: 100vw;
-    height: 100vh;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
 }
 
 .background--slideshow {
@@ -42,6 +60,7 @@ footer, header, hgroup, menu, nav, section {
     background-size: cover;
     background-repeat: no-repeat;
     backface-visibility: hidden;
+    background-attachment: fixed;
     animation: backgroundSlide 20s linear infinite 0s;
     animation-timing-function: cubic-bezier(.18,.92,.11,1);
     background: url('./assets/backgrounds/1.jpg');
@@ -67,4 +86,18 @@ footer, header, hgroup, menu, nav, section {
     100% {
         background: url('./assets/backgrounds/1.jpg');
     }
+}
+
+.themer {
+    outline: none;
+    border: none;
+    padding: 20px;
+    width: 200px;
+    cursor: pointer;
+    background: var(--PRIMARY-TEXT-COLOR);
+    color: var(--PRIMARY-BACKGROUND-COLOR);
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: 16px;
 }
