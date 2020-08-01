@@ -63,31 +63,7 @@ html[data-theme="dark"] {
     background-repeat: no-repeat;
     backface-visibility: hidden;
     background-attachment: fixed;
-    animation: backgroundSlide 20s linear infinite 0s;
-    animation-timing-function: cubic-bezier(.18,.92,.11,1);
-    background: url('./assets/backgrounds/1.jpg');
-}
-
-@keyframes backgroundSlide {
-    0% {
-        background: url('./assets/backgrounds/1.jpg');
-    }
-
-    25% {
-        background: url('./assets/backgrounds/2.jpg');
-    }
-
-    50% {
-        background: url('./assets/backgrounds/3.jpg');
-    }
-
-    75% {
-        background: url('./assets/backgrounds/4.jpg');
-    }
-
-    100% {
-        background: url('./assets/backgrounds/1.jpg');
-    }
+    background: url('./assets/wallpaper.jpg');
 }
 
 .themer {

@@ -16,7 +16,7 @@ const App = () => {
     const [ theme, setTheme ] = useState('');
     let [ searchResults, setSearchResults ] = useState([]);
     
-    const getData = async () => {
+    const getData = async (city='delhi') => {
         const data = await fetchData(city);
         setCityData(data);
         setDisplayData(true);
@@ -53,15 +53,11 @@ const App = () => {
                 setCity={setCity}
                 getData={getData}
             />
-            {
-                displayData ?
-                <WeatherCard data={cityData} /> :
-                null
-            }
+            { displayData && <WeatherCard data={cityData} /> }
             {
                 city === '' ?
                 null :
-                <SearchResults setCity={getData} data={searchResults} />
+                <SearchResults setCity={setCity} getData={getData} data={searchResults} />
             }
             <button className='themer' onClick={changeTheme}>
             {
