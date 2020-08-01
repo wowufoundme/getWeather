@@ -37,6 +37,7 @@ html {
     --PRIMARY-TEXT-COLOR: #2e2e2e;
     --PRIMARY-GREY: #a1a1a1;
     --SECONDARY-GREY: #5a5a5a;
+    --PRIMARY-BLUE: #0599ff;
 }
 
 html[data-theme="dark"] {
@@ -44,14 +45,15 @@ html[data-theme="dark"] {
     --PRIMARY-TEXT-COLOR: #ffffff;
     --PRIMARY-GREY: #a1a1a1;
     --SECONDARY-GREY: #5a5a5a;
+    --PRIMARY-BLUE: #0599ff;
 }
 
 .App {
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 150px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 0;
+    padding: 50px 0 100px 0;
 }
 
 .background--slideshow {
@@ -100,4 +102,7 @@ html[data-theme="dark"] {
     letter-spacing: 1px;
     font-weight: 300;
     font-size: 16px;
+    position: fixed;
+    z-index: 9999;
+    bottom: 20px
 }
