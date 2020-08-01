@@ -5,6 +5,7 @@ import WeatherCard from './WeatherCard/WeatherCard.component';
 import SearchResults from './SearchResults/SearchResults.component';
 import fetchData from './api/fetchData';
 import searchData from './api/searchData';
+import Header from './Header/Header.component';
 
 import './App.css';
 
@@ -45,9 +46,15 @@ const App = () => {
             setSearchResults([]); 
         }
     }, [city])
+
+    const clearData = () => {
+        setCity('');
+        setDisplayData(false);
+    }
  
     return (
         <div className='App background--slideshow'>
+            <Header title='Get Weather' />
             <Input
                 city={city}
                 setCity={setCity}
@@ -59,13 +66,14 @@ const App = () => {
                 null :
                 <SearchResults setCity={setCity} getData={getData} data={searchResults} />
             }
-            <button className='themer' onClick={changeTheme}>
+            <button className='themer posLeft' onClick={changeTheme}>
             {
                 theme === '' ?
                 "Dark Theme" :
                 "Light Theme"
             }
             </button>
+            <button className='themer posRight btn--invert' onClick={() => clearData()}>Clear</button>
         </div>
     );
 }
