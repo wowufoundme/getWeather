@@ -12,7 +12,7 @@ const Input = props => {
                 placeholder="Enter a city..."
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
-                onKeyPress={(e) => e.key === 'Enter' ? getData(e) : null}
+                onKeyPress={(e) => e.key === 'Enter' ? getData(e.target.value) : null}
                 className="input--control"
             />
         </div>

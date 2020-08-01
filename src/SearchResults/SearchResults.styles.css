@@ -1,0 +1,24 @@
+.search--container {
+    position: absolute;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    max-height: 300px;
+    overflow-x: hidden;
+    width: 400px;    
+    background: var(--PRIMARY-BACKGROUND-COLOR);
+    color: var(--PRIMARY-TEXT-COLOR);
+}
+
+.search--parameter {
+    width: 100%;
+    padding: 10px 20px;
+    cursor: default;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.search--parameter:hover {
+    background: var(--PRIMARY-BLUE);
+    color: #ffffff;
+    cursor: pointer;
+}
