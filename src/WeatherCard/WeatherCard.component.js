@@ -10,7 +10,6 @@ const WeatherCard = props => {
 
     return (
         <div className='card--container'>
-            {console.log(props.data)}
             <div className='city--info--container'>
                 <span className='city--name'>{data.name}</span>
                 <span className='city--country'>{data.sys.country}</span>
