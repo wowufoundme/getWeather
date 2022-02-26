@@ -1,7 +1,6 @@
 .header--container {
-    width: 450px;
+    width: 100%;
     background: var(--PRIMARY-BACKGROUND-COLOR);
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,7 +32,6 @@
     flex-direction: column;
     align-items: center; 
     justify-content: center;
-    border-bottom: 1px solid var(--PRIMARY-GREY);
 }
 
 .subtitle--text {

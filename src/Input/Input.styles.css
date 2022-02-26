@@ -1,12 +1,41 @@
+.input--container {
+    width: 100%;
+    z-index: 1;
+    border-bottom: 2px solid var(--PRIMARY-GREY);
+}
+
 .input--control {
+    width: 100%;
     outline: none;
     border: none;
-    width: 410px;
-    height: 60px;
     padding: 20px;
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 0; 
-    background: var(--PRIMARY-BACKGROUND-COLOR);
-    color: var(--PRIMARY-TEXT-COLOR)
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-top: 10px; 
+    background: transparent;
+    color: var(--PRIMARY-TEXT-COLOR);
+}
+
+input::placeholder {
+    color: var(--PRIMARY-GREY);
+}
+
+/* Remove datalist arrow dropdown icon */
+input::-webkit-calendar-picker-indicator {
+    display: none !important;
+}
+
+.city--datalist {
+    height: 300px;
+    position: relative;
+    background: #ffffff;
+}
+
+.city--datalist * {
+    width: 100%;
+}
+
+.search--parameter {
+    background: rgba(255,255,255,1);
 }

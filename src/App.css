@@ -34,26 +34,34 @@ footer, header, hgroup, menu, nav, section {
 
 html {
     --PRIMARY-BACKGROUND-COLOR: #ffffff;
+    --PRIMARY-BACKGROUND-COLOR-INVERT: #1a1a1a;
     --PRIMARY-TEXT-COLOR: #2e2e2e;
     --PRIMARY-GREY: #a1a1a1;
     --SECONDARY-GREY: #5a5a5a;
     --PRIMARY-BLUE: #0599ff;
+    --GRAD-DIRECTION: to right;
 }
 
 html[data-theme="dark"] {
     --PRIMARY-BACKGROUND-COLOR: #1a1a1a;
+    --PRIMARY-BACKGROUND-COLOR-INVERT: #ffffff;
     --PRIMARY-TEXT-COLOR: #ffffff;
-    --PRIMARY-GREY: #a1a1a1;
+    --PRIMARY-GREY: #cccccc;
     --SECONDARY-GREY: #5a5a5a;
     --PRIMARY-BLUE: #0599ff;
+    --GRAD-DIRECTION: to right;
+}
+
+body {
+    min-height: calc(100vh);
 }
 
 .App {
-    min-height: calc(100vh - 150px);
+    height: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    padding: 50px 0 100px 0;
+    justify-content: center;
 }
 
 .background--slideshow {
@@ -63,28 +71,89 @@ html[data-theme="dark"] {
     background-repeat: no-repeat;
     backface-visibility: hidden;
     background-attachment: fixed;
-    background: url('./assets/wallpaper.jpg');
+    background: transparent;
+    /* background: #43cea2; background: -webkit-linear-gradient(to right, #185a9d, #43cea2); background: linear-gradient(to right, #185a9d, #43cea2); */
+    /* background: url('./assets/wall.jpg');
+    background: #360033;
+    background: -webkit-linear-gradient(to right, #0b8793, #360033);
+    background: linear-gradient(to right, #0b8793, #360033); */
+    /* animation: background-infinite-2 infinite 30s; */
+}
+
+.container {
+    height: 90%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 0;
+}
+
+/* .container:before {
+    content: '';
+    width: inherit;
+    height: 60%;
+    position: absolute;
+    display: block;
+    background: var(--PRIMARY-BACKGROUND-COLOR-INVERT);
+    opacity: 0.5;
+    filter: blur(5px);
+    box-shadow: 0 0 5px 5px var(--PRIMARY-BACKGROUND-COLOR-INVERT);
+    z-index: -1;
+} */
+
+@keyframes background-infinite-2 {
+    0%      { background: #fc00ff;  }
+    20%     { background: #43cea2;  }
+    40%     { background: #83a4d4;  }
+    60%     { background: #FFE000;  }
+    80%     { background: #b92b27;  }
+    100%    { background: #fc00ff;  }
+}
+
+
+@keyframes background-infinite {
+    0%      { background: #fc00ff; background: -webkit-linear-gradient(to right, #00dbde, #fc00ff); background: linear-gradient(to right, #00dbde, #fc00ff); }
+    20%     { background: #43cea2; background: -webkit-linear-gradient(to right, #185a9d, #43cea2); background: linear-gradient(to right, #185a9d, #43cea2); }
+    40%     { background: #83a4d4; background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4); background: linear-gradient(to right, #b6fbff, #83a4d4); }
+    60%     { background: #FFE000; background: -webkit-linear-gradient(to right, #799F0C, #FFE000); background: linear-gradient(to right, #799F0C, #FFE000); }
+    80%     { background: #b92b27; background: -webkit-linear-gradient(to right, #1565C0, #b92b27); background: linear-gradient(to right, #1565C0, #b92b27); }
+    100%    { background: #fc00ff; background: -webkit-linear-gradient(to right, #00dbde, #fc00ff); background: linear-gradient(to right, #00dbde, #fc00ff); }
 }
 
 .themer {
     outline: none;
     border: none;
-    padding: 20px;
-    width: 150px;
+    width: 50px;
+    height: 50px;
+    line-height: 0;
     cursor: pointer;
     background: var(--PRIMARY-TEXT-COLOR);
-    color: var(--PRIMARY-BACKGROUND-COLOR);
-    margin-top: 20px;
     letter-spacing: 1px;
-    font-weight: 300;
     font-size: 16px;
     position: fixed;
     z-index: 9999;
-    bottom: 20px
+    bottom: 20px;
+    border-radius: 50%;
 }
 
 .posLeft {
-    right: 51%;
+    outline: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    line-height: 0;
+    cursor: pointer;
+    background: var(--PRIMARY-TEXT-COLOR);
+    letter-spacing: -2px;
+    font-size: 16px;
+    position: fixed;
+    z-index: 9999;
+    border-radius: 50%;
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
 }
 
 .posRight {
@@ -94,4 +163,28 @@ html[data-theme="dark"] {
 .btn--invert {
     background: var(--PRIMARY-BACKGROUND-COLOR);
     color: var(--PRIMARY-TEXT-COLOR);
+}
+
+.left--section {
+    width: 100%;
+    flex: 1 1 auto;
+}
+
+.weather--data {
+    width: 100%;
+    flex: 1 1 auto;
+}
+
+.backdrop--display__half {
+    min-height: 30%;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: url('./assets/mountains.jpg');
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    filter: blur(5px);
+    box-shadow: 0 0 0 5px #000;
 }

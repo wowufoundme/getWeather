@@ -1,14 +1,35 @@
 .card--container {
-    width: 450px;
-    padding: 20px;
+    width: 100%;
+    height: 100%;
     border-radius: 0 0 10px 10px;
     border-top: 1px solid rgba(0,0,0,0.05);
-    background-color: var(--PRIMARY-BACKGROUND-COLOR);
+    background: transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    /* box-shadow: -10px 10px 2px 5px var(--PRIMARY-BACKGROUND-COLOR-INVERT); */
+    transition: all 0.2s ease-in-out;
+    transform: translate3d(0px, 0px, 0);
+    z-index: 0;
+    padding: 20px 0;
 }
+
+.card--container:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--PRIMARY-BACKGROUND-COLOR);
+    opacity: 0.5;
+    z-index: -2;
+}
+
+/* .card--container:hover {
+    box-shadow: -20px 20px 2px 5px var(--PRIMARY-BACKGROUND-COLOR-INVERT);
+    transform: translate3d(10px, -10px, 0);
+} */
 
 .city--info--container {
     display: flex;
